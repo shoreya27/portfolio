@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Portfolio Home</title>
+    <title>{{blogs.stat}}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -45,7 +45,7 @@
           <div class="navbar-nav ml-auto" >
             <a class="nav-item nav-link" href="https://www.linkedin.com/in/shoreyagupta2707/">linkedin </a>
             <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
-            <a class="nav-item nav-link" href="{%url 'blog'%}">Blogs</a>
+            <a class="nav-item nav-link " href=#>Blogs</a>
 
           </div>
         </div>
@@ -54,38 +54,25 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">Hi,I'm Shoreya Gupta!</h1>
-      <p class="lead text-muted">I love to make django websites , I am still learning and exploring.This is just a little of that craft.Amazing Folks let's keep going....</p>
-      <img src="{% static 'shoreya.jpg' %}" height="300"></img>
-      <p>
-        <a href="mailto:gupta.shoreya2707@gmail.com" class="btn btn-success my-2">Email Me</a>
-      </p>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-        {%for jobs in job.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <a href="{% url 'jd' %}"><img class="bd-placeholder-img card-img-top" src="{{jobs.image.url}}" width="100%" height="225"  /></a>
-            <div class="card-body">
-              <p class="card-text">{{ jobs.summary }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-
+  <div class="container">
+    <h1 class=" pt-5 "> {{blogs.stat}}</h1>
+    <hr>
+      <div class="mb-1 text-muted "><h4>{{blogs.Publishdate_pretty}}</h4></div>
+      <img src='{{blogs.image.url}}' class="img-thumbnail" height="400" >
+      <br>
+       <p class="card-text mb-auto">{{blogs.body}}</p>
       </div>
-    </div>
-  </div>
+
+
+
+
+
+
 
 </main>
-
+<br>
+<br>
+<br>
 <footer class="text-muted">
   <div class="container text-center ">
     <p> © shoreya gupta {%now "Y"%}</p>
