@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$wsjw^86ehma(=atuvb=3sa48(+j+g12akq80fe5@(m07!j)xl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -132,6 +132,6 @@ MEDIA_URL = '/media/'
 
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
